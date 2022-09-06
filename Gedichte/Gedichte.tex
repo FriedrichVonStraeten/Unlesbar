@@ -1,0 +1,79 @@
+%%%%% Dokumentenklasse mit verschiedenen Attributen
+\documentclass[a4paper, bibtotocnumbered,liststotoc,12pt]{scrartcl}
+
+%%%%% Zeilenabstand
+\usepackage{setspace}
+\onehalfspacing %anderthalbzeilig
+
+%%%%% Mathematik und Symbole
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+%%%%% Seitenrnder und Ausrichtung
+\usepackage[paper=a4paper,left=30mm,right=20mm,top=30mm,bottom=30mm]{geometry} %define margins..
+\geometry{a4paper} % hier auch mglich 'letter' oder 'a5paper' ... etc.
+\usepackage{lmodern}
+\usepackage{verbatim}
+\setkomafont{sectioning}{\rmfamily\bfseries\boldmath}
+\usepackage[usenames,dvipsnames]{color}
+
+
+%%%%% berschriften
+\pagestyle{headings} %Fgt berschrift ber jeder Seite ein
+
+%\usepackage{overcite}
+
+%%%%% Tabellen und Grafiken
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{xtab}
+\usepackage{float}
+\usepackage{wrapfig}
+%\usepackage{pdfpages}
+%\usepackage[round]{natbib}
+\bibliographystyle{apalike}
+%\setcitestyle{authoryear,open={(},close={)}}
+
+
+
+
+%%%%% Sonstiges
+
+%\usepackage{eurosym} %Eurosymbol, required only on mac
+\usepackage{hyperref} %links in final pdf document
+\hypersetup{%
+colorlinks=true,%
+linkcolor=Black,%
+urlcolor=Black,%
+citecolor=Black,%
+%pdftitle={},%
+%pdfauthor={},%
+%%pdfkeywords={}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagenumbering{roman}
+
+%\input{tex/Cover}
+
+
+
+%%%% Inhalts-, Abbildungs- und Tabellenverzeichnis
+%\newpage % force start of new page
+%\tableofcontents %fgt ein Inhaltsverzeichnis ein
+
+\newpage
+\pagenumbering{arabic}
+%\input{tex/Introduction}
+
+\input{tex/Main}
+
+
+\end{document}
